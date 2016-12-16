@@ -1,0 +1,34 @@
+- text: Home
+  href: /
+- text: Services
+  href: '#'
+  dropdown: true
+  subitems:
+   - text: HVAC
+     href: /air-conditioning-repair-endicott-ny/
+   - text: Plumbing
+     href: /plumbing-company-endicott-ny/
+   - text: Commercial
+     href: /commercial-plumbing-contractors-endicott-ny/
+- text: Products
+  href: /heil-heating-cooling-products-endicott-ny/
+- text: Links
+  href: /products/
+  dropdown: true
+  subitems:
+    - text: Request a Quote
+      href: /furnace-repair-endicott-ny/
+    - text: Service Agreement
+      href: /residential-plumbing-endicott-ny/
+- text: About
+  href: '#'
+  dropdown: true
+  subitems:
+   - text: About Us
+     href: /heating-air-conditioning-contractors-endicott-ny/
+   - text: Client Testimonials
+     href: '#'
+   - text: Blog
+     href: '#'
+- text: Contact
+  href: /action-plumbing-heating-cooling-endicott-ny/

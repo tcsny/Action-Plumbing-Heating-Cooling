@@ -3,5 +3,101 @@
 
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lustria');
+
 @import "variables";
 @import "bootstrap";
+
+// page/article content
+.article-content {
+
+	img {
+		@extend .img-responsive;
+		@extend .center-block;
+	}
+
+	a:not(.thumbnail):not(.btn):not([data-toggle="tab"]) {
+		text-decoration: underline;
+	}
+
+}
+
+.list-col-2 {
+	list-style: outside disc;
+	@media (min-width: $screen-md-min) {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		-moz-column-count: 2; /* Firefox */
+		column-count: 2;
+	}
+
+	> li {
+		@media (min-width: $screen-md-min) {
+			margin-left: 0.75em;
+		}
+		-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+		page-break-inside: avoid; /* Firefox */
+		break-inside: avoid; /* IE 10+ */
+	}
+}
+
+// text
+.text-serif {
+	font-family: $font-family-serif;
+}
+
+// gradients
+.gradient-dark {
+	color: #fff;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#464646+0,000000+100 */
+	background: #464646; /* Old browsers */
+	background: -moz-linear-gradient(top,  #464646 0%, #000000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #464646 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #464646 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464646', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+// layout
+#header-main {
+	margin-bottom: 0;
+	padding: 15px 0;
+	color: #fff;
+	background: #0E1F48;
+}
+
+#header-site-title {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header-logo {
+	margin-top: 5px;
+}
+
+#header-phone {
+	margin-top: 45px;
+}
+
+#nav-main {
+	border-top: solid 1px #000;
+	border-bottom: solid 1px #000;
+}
+
+#home-well {
+	margin-top: -20px;
+	margin-bottom: 20px;
+	padding: 15px 0;
+}
+
+#carousel-home {
+	margin-bottom: 0;
+}
+
+#footer-main {
+	margin-top: $grid-gutter-width;
+	margin-bottom: 0;
+	padding: 15px 0;
+	color: #fff;
+	background: #091F48;
+	border-top: solid 8px $brand-primary;
+}
