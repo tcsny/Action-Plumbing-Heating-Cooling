@@ -1,0 +1,40 @@
+---
+layout: default
+title: Testimonials
+permalink: /testimonials/
+---
+
+<header class="page-header">
+	<h2>
+		{{ page.title }}
+	</h2>
+</header>
+
+{% for testimonial in site.testimonials %}
+
+<div class="media">
+	<div class="media-body">
+		<h4 class="media-heading text-serif h3">
+			{{ testimonial.title }}
+		</h4>
+		<blockquote>
+			{{ testimonial.content }}
+			<footer>
+				{{ testimonial.client }}
+				<em>
+					{{ testimonial.date | date_to_string }}
+				</em>
+				{% if testimonial.stars %}
+				<small>
+					{% for num in (1..testimonial.stars) %}
+					<span class="glyphicon glyphicon-star text-warning" aria-hidden="true"></span>
+					{% endfor %}
+				</small>
+				{% endif %}
+			</footer>
+		</blockquote>
+		<hr>
+	</div>
+</div>
+
+{% endfor %}
