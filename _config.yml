@@ -32,6 +32,10 @@ phone: 607-205-1177
 collections:
    testimonials:
       output: false
+   products:
+      output: false
+
+exclude: ['_products']
 
 markdown: kramdown
 # theme: base-bootstrap

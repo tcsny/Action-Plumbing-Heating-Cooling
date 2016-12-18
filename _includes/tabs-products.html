@@ -1,47 +1,48 @@
 <section id="products-tabs">
 
+	{{ site.products.category }}
+
 	<!-- Nav tabs -->
 	<ul class="nav nav-tabs" role="tablist">
-		<li role="presentation" class="active">
-			<a href="#gas-furnaces" aria-controls="gas-furnaces" role="tab" data-toggle="tab">Gas Furnaces</a>
+		{% for cat in site.data.product_categories %}
+		<li role="presentation" class="{% if forloop.index == 1 %}active{% endif %}">
+			<a href="#{{ cat.name | downcase | replace: ' ', '-' }}" aria-controls="{{ cat.name | downcase | replace: ' ', '-' }}" role="tab" data-toggle="tab">{{ cat.name }}</a>
 		</li>
-		<li role="presentation">
-			<a href="#boilers" aria-controls="boilers" role="tab" data-toggle="tab">Boilers</a>
-		</li>
-		<li role="presentation">
-			<a href="#ductless-split-systems" aria-controls="ductless-split-systems" role="tab" data-toggle="tab">Ductless Split Systems</a>
-		</li>
-		<li role="presentation">
-			<a href="#air-conditioning" aria-controls="air-conditioning" role="tab" data-toggle="tab">Air Conditioning</a>
-		</li>
-		<li role="presentation">
-			<a href="#on-demand-water-heaters" aria-controls="on-demand-water-heaters" role="tab" data-toggle="tab">On Demand Water Heaters</a>
-		</li>
-		<li role="presentation">
-			<a href="#water-heaters" aria-controls="water-heaters" role="tab" data-toggle="tab">Water Heaters</a>
-		</li>
+		{% endfor %}
 	</ul>
 
 	<!-- Tab panes -->
 	<div class="tab-content">
-		<div role="tabpanel" class="tab-pane active" id="gas-furnaces">
-			<h3>Gas Furnaces</h3>
+
+		{% for cat in site.data.product_categories %}
+		<div role="tabpanel" class="tab-pane {% if forloop.index == 1 %}active{% endif %}" id="{{ cat.name | downcase | replace: ' ', '-' }}">
+
+			<header class="page-header">
+				<h3>{{ cat.name }}</h3>
+			</header>
+
+			{% assign products = site.products | where: "category", cat.name %}
+			{% assign products = products | sort: "title" %}
+			{% for product in products %}
+			<h4 class="media-heading">{{ product.title }}</h4>
+			<div class="row">
+				<div class="col-sm-3">
+					{% if product.image_src %}
+					<img class="img-responsive center-block" src="{{ product.image_src }}" alt="{{ product.title }}" width="200">
+					{% else %}
+					<img class="img-responsive center-block" src="https://placehold.it/300x400.png?text=No Image" alt="{{ product.title }}" width="200">
+					{% endif %}
+				</div>
+				<div class="col-sm-9">
+					{{ product.content }}
+				</div>
+			</div>
+			<hr>
+			{% endfor %}
+
 		</div>
-		<div role="tabpanel" class="tab-pane" id="boilers">
-			<h3>Boilers</h3>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="ductless-split-systems">
-			<h3>Ductless Split Systems</h3>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="air-conditioning">
-			<h3>Air Conditioning</h3>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="on-demand-water-heaters">
-			<h3>On Demand Water Heaters</h3>
-		</div>
-		<div role="tabpanel" class="tab-pane" id="water-heaters">
-			<h3>Water Heaters</h3>
-		</div>
+		{% endfor %}
+
 	</div>
 
 </section>
