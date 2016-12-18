@@ -12,7 +12,7 @@
 // page/article content
 .article-content {
 
-	img {
+	img:not(.media-object) {
 		@extend .img-responsive;
 		@extend .center-block;
 	}
@@ -57,12 +57,21 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464646', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
+.gradiend-blue {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#223564+0,0e1f48+66,0e1f48+66 */
+	background: #0E1F48; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #223564 0%, #0e1f48 66%, #0e1f48 66%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  #223564 0%,#0e1f48 66%,#0e1f48 66%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  #223564 0%,#0e1f48 66%,#0e1f48 66%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#223564', endColorstr='#0e1f48',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 // layout
 #header-main {
 	margin-bottom: 0;
 	padding: 15px 0;
 	color: #fff;
-	background: #0E1F48;
+	@extend .gradiend-blue;
 }
 
 #header-site-title {
@@ -83,14 +92,25 @@
 	border-bottom: solid 1px #000;
 }
 
-#home-well {
-	margin-top: -20px;
-	margin-bottom: 20px;
+#emergency-service-jumbo {
 	padding: 15px 0;
+	&.home {
+		margin-top: -20px;
+		margin-bottom: 20px;
+	}
+	&.not-home {
+		margin-top: $grid-gutter-width;
+		margin-bottom: -$grid-gutter-width;
+	}
 }
 
 #carousel-home {
 	margin-bottom: 0;
+
+	.embed-responsive {
+		padding-bottom: 54%;
+	}
+
 }
 
 #footer-main {

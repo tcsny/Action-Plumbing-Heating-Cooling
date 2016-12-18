@@ -1,0 +1,24 @@
+{% if page.url == '/' %}
+{% assign home_class = 'home' %}
+{% else %}
+{% assign home_class = 'not-home' %}
+{% endif %}
+
+<section id="emergency-service-jumbo" class="gradient-dark {{ home_class }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h3 class="text-serif">24 Hour Emergency Service</h3>
+				<p class="lead">
+					Action Plumbing, Heating & Cooling is an industry leading HVAC company carrying and installing only the highest quality lines of heating and cooling products.
+				</p>
+				<p>
+					<a href="{{ '/action-plumbing-heating-cooling-endicott-ny/' | relativr_url }}" class="btn btn-block btn-lg btn-primary">Contact Us</a>
+				</p>
+			</div>
+			<div class="col-sm-6">
+				{% include carousel-home.html %}
+			</div>
+		</div>
+	</div>
+</section>

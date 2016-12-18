@@ -23,6 +23,13 @@
 
 			{% assign products = site.products | where: "category", cat.name %}
 			{% assign products = products | sort: "title" %}
+
+			{% unless products.first.content %}
+			<p class="h4 text-muted text-center">
+				There are no products categorized as <em>{{ cat.name }}</em> at this time.
+			</p>
+			{% else %}
+
 			{% for product in products %}
 			<h4 class="media-heading">{{ product.title }}</h4>
 			<div class="row">
@@ -39,6 +46,8 @@
 			</div>
 			<hr>
 			{% endfor %}
+
+			{% endunless %}
 
 		</div>
 		{% endfor %}

@@ -8,14 +8,28 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand visible-xs-block text-serif" href="tel:{{ site.phone }}">{{ site.phone }}</a>
+			<ul class="navbar-brand visible-xs-block list-inline">
+				<li>
+					<a class="navbar-link" href="tel:{{ site.phone }}">
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+						{{ site.phone }}
+					</a>
+				</li>
+				<li>
+					<a class="navbar-link" href="{{ '/action-plumbing-heating-cooling-endicott-ny/' | relative_url }}">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						Email
+					</a>
+				</li>
+			</ul>
+
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 			<ul class="nav navbar-nav">
-				
+
 				{% for navitem in site.data.navitems %}
 
 				{% assign active = nil %}
@@ -39,7 +53,13 @@
 						{% if subitem.divider %}
 						<li role="separator" class="divider"></li>
 						{% else %}
-						<li>
+
+						{% assign active = nil %}
+						{% if page.url == subitem.href %}
+						{% assign active = 'active' %}
+						{% endif %}
+
+						<li class="{{active}}">
 							<a href="{{ subitem.href | prepend: site.baseurl }}">
 								{{ subitem.text }}
 							</a>
