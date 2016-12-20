@@ -1,5 +1,5 @@
 ---
-title: Heil H9MPX,95% Variable Speed, Two Stage Heating Furnace
+title: Heil H9MPX, 95% Variable Speed, Two Stage Heating Furnace
 categories:
 - Gas Furnaces
 image_src: http://actionplumbingend.com/endicottplumbing/wp-content/uploads/2014/02/2.jpg

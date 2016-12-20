@@ -1,7 +1,5 @@
 <section id="products-tabs">
 
-	{{ site.products.category }}
-
 	<!-- Nav tabs -->
 	<ul class="nav nav-tabs" role="tablist">
 		{% for cat in site.data.product_categories %}
@@ -21,7 +19,7 @@
 				<h3>{{ cat.name }}</h3>
 			</header>
 
-			{% assign products = site.products | where: "category", cat.name %}
+			{% assign products = site.products | where: "categories", cat.name %}
 			{% assign products = products | sort: "title" %}
 
 			{% unless products.first.content %}
