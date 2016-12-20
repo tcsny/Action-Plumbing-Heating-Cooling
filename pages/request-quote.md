@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Furnace Repair | Endicott, NY
-permalink: /furnace-repair-endicott-ny/
+permalink: "/furnace-repair-endicott-ny/"
+layout: default
 ---
 
 ## {{ page.title }}

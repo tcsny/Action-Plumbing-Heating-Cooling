@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Air Conditioning Repair | Endicott, NY
-permalink: /air-conditioning-repair-endicott-ny/
+permalink: "/air-conditioning-repair-endicott-ny/"
+layout: default
 ---
 
 ## {{ page.title }}

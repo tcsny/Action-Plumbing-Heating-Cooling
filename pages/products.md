@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Heil Heating & Cooling Products | Endicott, NY
-permalink: /heil-heating-cooling-products-endicott-ny/
+permalink: "/heil-heating-cooling-products-endicott-ny/"
+layout: default
 ---
 
 ## {{ page.title }}

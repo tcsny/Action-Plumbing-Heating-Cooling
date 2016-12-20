@@ -1,6 +1,6 @@
 ---
-layout: home
 title: Action Plumbing, Heating, & Cooling | Binghamton, NY
+layout: home
 ---
 
 ## {{ page.title }}

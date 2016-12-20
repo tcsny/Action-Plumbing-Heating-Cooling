@@ -1,6 +1,7 @@
 ---
+title: Heating
+date: 2014-06-05 00:00:00 Z
 layout: default
-title:  Heating
 client: Bobbie Jo Meade
 stars: 5
 ---

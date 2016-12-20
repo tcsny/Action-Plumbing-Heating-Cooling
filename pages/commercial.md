@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Commercial Plumbing Contractors | Endicott, NY
-permalink: /commercial-plumbing-contractors-endicott-ny/
+permalink: "/commercial-plumbing-contractors-endicott-ny/"
+layout: default
 ---
 
 ## {{ page.title }}

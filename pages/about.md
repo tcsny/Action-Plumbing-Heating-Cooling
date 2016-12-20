@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Heating & Air Conditioning Contractors | Endicott, NY
-permalink: /heating-air-conditioning-contractors-endicott-ny/
+permalink: "/heating-air-conditioning-contractors-endicott-ny/"
+layout: default
 ---
 
 ## {{ page.title }}

@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Residential Plumbing | Endicott, NY
-permalink: /residential-plumbing-endicott-ny/
+permalink: "/residential-plumbing-endicott-ny/"
+layout: default
 ---
 
 ## {{ page.title }}

@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Action Plumbing, Heating & Cooling | Endicott, NY
-permalink: /action-plumbing-heating-cooling-endicott-ny/
+permalink: "/action-plumbing-heating-cooling-endicott-ny/"
+layout: default
 ---
 
 ## {{ page.title }}

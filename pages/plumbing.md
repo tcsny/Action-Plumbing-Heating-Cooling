@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Plumbing Company & Drain Cleaning | Endicott, NY
-permalink: /plumbing-company-endicott-ny/
+permalink: "/plumbing-company-endicott-ny/"
+layout: default
 ---
 
 ## {{ page.title }}
